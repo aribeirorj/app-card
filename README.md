@@ -21,10 +21,6 @@
 
 Em primeiro lugar você precisa ter instalado globalmente `node` or `yarn` na sua máquina, Então você pode clonar o repositório e rodar os seguintes comandos dentro da pasta do projeto.
 
-Print do sistema
-
-![print do sistema](https://github.com/aribeirorj/app-card/blob/master/print.png?raw=true)
-
 Instalação:
 
 `yarn`
