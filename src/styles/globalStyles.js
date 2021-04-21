@@ -13,13 +13,17 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     outline: 0;
+    font-size: 62,5%;
     background: #ffff;
-    color: #707070;    
+    color: #707070;
+    box-sizing: border-box;    
   }
 
   body {
     -webkit-font-smoothing: antialiased;
     font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
   }
 
   a {
@@ -30,7 +34,6 @@ const GlobalStyle = createGlobalStyle`
     cursor: pointer;
     color: #c3c3c3;
   }
-
 `;
 
 export default GlobalStyle;

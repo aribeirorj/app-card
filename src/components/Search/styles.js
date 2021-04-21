@@ -3,29 +3,30 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  height: 150px;
-  width: 350px;
-  min-width: 315px;
-  max-width: 380px;
+  margin: 1rem;
+  align-items: center;
 `;
 
 export const Title = styled.div`
   display: flex;
   justify-content: center;
-  font-size: 50px;
+  font-size: 2.5em;
   font-weight: 800;
+  margin-bottom: 0, 3rem;
 `;
 
 export const Input = styled.input`
-  font-size: 18px;
-  margin: 10px;
-  padding: 20px;
+  font-size: 1.2rem;
+  margin: 2.1rem;
+  padding: 0.5rem;
   max-width: 100%;
-  border: 1px solid #ced4da;
+  border: 0.1rem solid #ced4da;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  border-radius: 30px;
-  width: 300px;
+  border-radius: 3rem;
+  min-width: 10em;
+  width: 14em;
+
   ::placeholder {
     color: #6c757d;
   }

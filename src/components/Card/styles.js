@@ -2,9 +2,11 @@ import styled from 'styled-components';
 
 export const Main = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 2fr));
-  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 2fr));
+  grid-row-gap: 4rem;
   width: 100%;
+  justify-items: center;
+  align-items: center;
 `;
 
 export const Container = styled.div`
@@ -15,7 +17,7 @@ export const Container = styled.div`
   background-color: #fff;
   background-image: url(${(props) => props.img});
   background-repeat: no-repeat;
-  width: 300px;
+  /* width: 300px; */
   min-width: 280px;
   max-width: 300px;
   height: 440px;
