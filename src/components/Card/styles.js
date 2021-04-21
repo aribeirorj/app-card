@@ -10,21 +10,56 @@ export const Main = styled.div`
 `;
 
 export const Container = styled.div`
+  position: relative;
+  min-width: 280px;
+  max-width: 20rem;
+  height: 30rem;
+`;
+
+export const CardContainer = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+  border-radius: 45px;
+
+  -webkit-box-shadow: 33px 40px 47px -23px rgba(173, 173, 173, 0.75);
+  -moz-box-shadow: 33px 40px 47px -23px rgba(173, 173, 173, 0.75);
+  box-shadow: 33px 40px 47px -23px rgba(173, 173, 173, 0.75);
+
+  &:hover {
+    transform: rotateY(180deg);
+  }
+`;
+
+export const Front = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+
   display: flex;
   flex-direction: column;
-  border-radius: 45px !important;
+  border-radius: 45px;
   align-items: center;
   background-color: #fff;
   background-image: url(${(props) => props.img});
   background-repeat: no-repeat;
-  /* width: 300px; */
-  min-width: 280px;
-  max-width: 300px;
-  height: 440px;
-  padding: 30px;
-  -webkit-box-shadow: 33px 40px 47px -23px rgba(173, 173, 173, 0.75);
-  -moz-box-shadow: 33px 40px 47px -23px rgba(173, 173, 173, 0.75);
-  box-shadow: 33px 40px 47px -23px rgba(173, 173, 173, 0.75);
+`;
+
+export const Back = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 95%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  color: #fff
+
+  display: flex;
+  flex-direction: column;
+  border-radius: 45px;
+  align-items: center;
 `;
 
 export const Head = styled.div`
@@ -33,19 +68,17 @@ export const Head = styled.div`
   align-items: center;
   justify-content: center;
 
-  font-size: 20pt;
+  font-size: 1.5em;
   width: 100%;
 
   white-space: wrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  border: 0px;
 `;
 
 export const Body = styled.div`
   display: flex;
   flex-direction: column;
-  /* align-items: end; */
   height: 100vh;
   justify-content: flex-end;
 
@@ -56,14 +89,14 @@ export const Body = styled.div`
 
 export const Description = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
+  padding: 1em;
+  height: inherit;
 
   p {
-    white-space: wrap;
-    overflow: auto;
-    text-overflow: ellipsis;
-    max-width: 100%;
-    max-height: 100px;
+    height: inherit;
+    overflow: hidden;
   }
 `;
 

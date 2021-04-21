@@ -13,10 +13,11 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     outline: 0;
-    font-size: 62,5%;
-    background: #ffff;
+    font-size: 62,5%;    
     color: #707070;
-    box-sizing: border-box;    
+    box-sizing: border-box;
+
+    
   }
 
   body {

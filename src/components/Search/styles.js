@@ -13,10 +13,11 @@ export const Title = styled.div`
   font-size: 2.5em;
   font-weight: 800;
   margin-bottom: 0, 3rem;
+  line-height: initial;
 `;
 
 export const Input = styled.input`
-  font-size: 1.2rem;
+  font-size: 0.9em;
   margin: 2.1rem;
   padding: 0.5rem;
   max-width: 100%;
