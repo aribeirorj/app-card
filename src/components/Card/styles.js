@@ -3,10 +3,12 @@ import styled from 'styled-components';
 export const Main = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 2fr));
-  grid-row-gap: 4rem;
+  grid-column-gap: 0rem;
+  grid-row-gap: 2rem;
   width: 100%;
   justify-items: center;
   align-items: center;
+  margin-bottom: 4.5rem;
 `;
 
 export const Container = styled.div`
@@ -20,60 +22,65 @@ export const CardContainer = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
+
   transform-style: preserve-3d;
   transition: all 0.5s ease;
-  border-radius: 45px;
 
-  -webkit-box-shadow: 33px 40px 47px -23px rgba(173, 173, 173, 0.75);
-  -moz-box-shadow: 33px 40px 47px -23px rgba(173, 173, 173, 0.75);
-  box-shadow: 33px 40px 47px -23px rgba(173, 173, 173, 0.75);
+  /* border-radius: 10px; */
+
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
 
   &:hover {
     transform: rotateY(180deg);
+    cursor: pointer;
   }
 `;
 
 export const Front = styled.div`
+  display: flex;
+  flex-direction: column;
+
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
 
-  display: flex;
-  flex-direction: column;
-  border-radius: 45px;
+  border-radius: 10px;
   align-items: center;
   background-color: #fff;
-  background-image: url(${(props) => props.img});
-  background-repeat: no-repeat;
+
+  background: url(${(props) => props.img}) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 `;
 
 export const Back = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 95%;
-  backface-visibility: hidden;
-  transform: rotateY(180deg);
-  color: #fff
-
   display: flex;
   flex-direction: column;
-  border-radius: 45px;
   align-items: center;
+  position: absolute;
+
+  background-color: #fff;
+  border-radius: 10px;
+
+  width: 100%;
+  height: 100%;
+
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
 `;
 
 export const Head = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  font-size: 2em;
+  text-align: center;
 
-  font-size: 1.5em;
-  width: 100%;
-
-  white-space: wrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  color: #fff;
+  line-height: 1em;
+  padding: 0.9em;
 `;
 
 export const Body = styled.div`
@@ -103,7 +110,10 @@ export const Description = styled.div`
 export const Footer = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+
+  font-size: 1.2em;
+  color: #fff;
+  /* justify-content: space-around; */
   width: 100%;
 `;
 

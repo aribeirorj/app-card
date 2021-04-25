@@ -13,11 +13,10 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     outline: 0;
-    font-size: 62,5%;    
-    color: #707070;
+    font-size: 62,5%;
+    background-color: rgb(132,132,179);     
     box-sizing: border-box;
-
-    
+   
   }
 
   body {
@@ -25,6 +24,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
     line-height: 1.7;
+    color: #707070;
   }
 
   a {

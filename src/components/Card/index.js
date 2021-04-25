@@ -23,17 +23,13 @@ function Card(props = []) {
       <CardContainer>
         <Front
           img={
+            item.attributes?.coverImage?.large &&
             item.attributes?.coverImage?.large
-              ? item.attributes?.coverImage?.tiny
-              : tiny
           }
           alt="Imagem do anime"
         >
           <Body>
             <Head>{item.attributes.slug}</Head>
-            <Footer>
-              <Details>Status: {item.attributes.status}</Details>
-            </Footer>
           </Body>
         </Front>
         <Back>
