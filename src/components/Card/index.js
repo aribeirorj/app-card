@@ -5,15 +5,11 @@ import {
   Head,
   Body,
   Description,
-  Footer,
-  Details,
   Main,
   CardContainer,
   Front,
   Back,
 } from './styles';
-
-import tiny from '../../assets/img/tiny.jpg';
 
 function Card(props = []) {
   const { dataAnime = [] } = props;
